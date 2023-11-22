@@ -40,7 +40,6 @@ public class DrawNumberConsoleView implements DrawNumberView{
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
-
     }
 
     @Override
