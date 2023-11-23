@@ -22,12 +22,13 @@ public final class SimpleGUIWithFileChooser{
         final JTextArea textArea = new JTextArea();
         final JTextField actualPath = new JTextField(controller.getCurrentFilePath());
         final JButton save = new JButton("Save");
-        save.addActionListener(new ActionListener() {
+        /*save.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent e) {
                 controller.save(textArea.getText());
             }
-        });
+        });*/
+        save.addActionListener(e -> controller.save(textArea.getText()));
 
         final JButton browse = new JButton("Browse...");
         browse.addActionListener(new ActionListener() {
