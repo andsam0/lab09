@@ -41,6 +41,7 @@ public final class SimpleGUI {
             public void actionPerformed(ActionEvent arg0){
                 controller.setNextString(currentString.getText());
                 controller.printString();
+                currentString.setText("");
             }
         });
 
@@ -49,7 +50,7 @@ public final class SimpleGUI {
             @Override
             public void actionPerformed(ActionEvent arg0) {
                 for (String string : controller.getHistory()) {
-                    textArea.append(string + " ");
+                    textArea.append(string + "\n");
                 }
             }
             
